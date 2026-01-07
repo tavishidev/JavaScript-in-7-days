@@ -11,8 +11,8 @@ function addUser(a,b){
 console.log(addUser(4,5));
 
 //Create a function that calculates the area of a rectangle
-function areaOfRectangle(lenght,breadth) {
-    return lenght*breadth;
+function areaOfRectangle(l,b) {
+    return l*b;
 }
 console.log(areaOfRectangle(4,6));
 
