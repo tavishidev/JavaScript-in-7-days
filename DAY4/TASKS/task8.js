@@ -1,5 +1,5 @@
 function leapYear(yr) {
-    if (yr % 400===0)
+    if ((yr %4===0 && yr%100!==0)||yr%400===0)
         return `${yr} is leap year`;
     else
         return `${yr} is not a leap year`;
@@ -24,9 +24,7 @@ function daysInMonth(yr, month) {
     else
         return 30;}
     console.log(daysInMonth(2000,"June"));
+
+// Create a function to calculate days between two dates (year, month, day) 
+// Create a function to determine day of week from date 
     
-
-
-
-
-
