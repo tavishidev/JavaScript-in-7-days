@@ -49,8 +49,8 @@ let b=4;*/
 
  //console.log(user);
  ///let user="tavishi"; //it will show error as it need to be initialize before using
- console .log(author);
- var author="NARAYAN"; //undefined: engines knows that author exist 
+ console.log(author);
+ var author="NARAYAN"; //undefined: JS knows that author exist but value is not assigned yet
 
 
  

@@ -14,7 +14,7 @@ else
 
 
 //Find all prime numbers between 1 and 100 AND  count the number of times prime exist between 1 and 100
-/*console.log("all prime numbers between 1 and 100 is:");
+console.log("all prime numbers between 1 and 100 is:");
 let count1 = 0;
 for (let num = 2; num <= 100; num++) {
     let IsPrime = true;
@@ -25,45 +25,12 @@ for (let num = 2; num <= 100; num++) {
         }
     }
     if (IsPrime) {
+        
         console.log(num);
         count1 = count1 + 1;
     }
 
 }
-console.log(`the number of times prime exist between 1 and 100 is ${count1}`)*/
-
-
-// Find the first N prime numbers (e.g., first 20 primes
-let Count=0;
-for (let number = 2; number <= 100; number++) {
-    let isprime = true;
-    for (let i = 2; i < number; i++) {
-        if (number % i === 0) {
-            isprime = false;
-            break;
-        }
-        if (isprime) {
-            Count = Count + 1;
-            console.log(number);
-
-            if (Count === 20)
-                break;
-            }
-
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+ console.log(`the number of times prime exist between 1 and 100 is ${count1}`)
 
 

@@ -1,11 +1,11 @@
 //Calculate factorial of a number using a for loop 
 //5=5x4x3x2x1
-/*let fac = 1;
+let fac = 1;
 let num = 4;
 for (let i = 1; i <= num; i++) {
     fac = fac * i;
 }
-console.log(`factorial of ${num}=${fac}`);*/
+console.log(`factorial of ${num}=${fac}`);
 
 //Calculate factorial using a while loop 
 let number = 5;
