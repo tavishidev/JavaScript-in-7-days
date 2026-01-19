@@ -86,7 +86,7 @@ console.log(limitedcall("ashima"));
 Input → Output is remembered
 Same input again → use memory, not logic*/
 
-/*function createcachefunction(fn) {
+function createcachefunction(fn) {
   let cache = {};
   return function (...arg) {
     let key = arg.join(","); //array to string conversion
@@ -109,4 +109,3 @@ function mul(n1, n2) {
 const cachevalue = createcachefunction(mul);
 console.log(cachevalue(6, 7));
 console.log(cachevalue(6, 7));
-*/
