@@ -69,7 +69,8 @@ function addFive(num){
 const myMap=createMap(numbers,addFive);
 console.log(myMap); 
 
-// Create a compose function that combines multiple functions */
+
+
 
 
 
