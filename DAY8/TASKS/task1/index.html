@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Selection Practice</title>
+</head>
+<body>
+
+  <!-- Headings -->
+  <h1 id="main-heading">DOM Practice Page</h1>
+  <h2 class="sub-heading">Learning DOM</h2>
+
+  <!-- Paragraphs -->
+  <p class="text">Paragraph One</p>
+  <p class="text">Paragraph Two</p>
+
+  <!-- Divs -->
+  <div id="container">
+    <p class="text">Inside container</p>
+  </div>
+
+  <!-- Lists -->
+  <ul id="fruit-list">
+    <li class="item">Apple</li>
+    <li class="item">Banana</li>
+    <li class="item">Mango</li>
+  </ul>
+
+  <ul class="city-list">
+    <li>Delhi</li>
+    <li>Mumbai</li>
+  </ul>
+
+  <script>
+    //Select an element by ID and log it 
+    const heading=document.getElementById("main-heading");
+    console.log(heading);
+
+    //Select multiple elements by class name 
+    const paragraphs=document.getElementsByClassName("text");
+    console.log(paragraphs);
+
+    //Select elements using querySelector and querySelectorAll
+    const firstParagraph=document.querySelector(".text");
+    console.log(firstParagraph);
+
+    const secondParagraph=document.querySelectorAll(".text");
+    console.log(secondParagraph);
+
+    //Select nested elements (e.g., li inside a specific ul)
+    const fruitItems=document.querySelectorAll("#fruit-list li");
+    console.log(fruitItems);
+
+    //Count and log the number of elements of each type
+    const headingCount=document.getElementsByTagName("h1").length;
+    const paragraphCount=document.getElementsByTagName("p").length;
+    const divCount=document.getElementsByTagName("div").length;
+    const ulCount=document.getElementsByTagName("ul").length;
+    const liCount=document.getElementsByTagName("li").length;
+
+    console.log("count of h1:",headingCount);
+    console.log("count of p:",paragraphs);
+    console.log("count of div:",divCount);
+    console.log("count of ul:", ulCount);
+    console.log("count of li",liCount);
+    
+    //only for understanding purpose-We write the tag name inside querySelectorAll 
+    // when we want to select specific types of elements, often within a particular parent or container
+    console.log(document.querySelectorAll("ul"));
+    console.log(document.querySelectorAll("ul li"));
+    console.log(document.querySelectorAll("#fruit-list li"));
+
+  </script>
+  </body>
+  </html>
