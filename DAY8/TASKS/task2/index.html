@@ -1,0 +1,76 @@
+<!--    - Create a page with headings, paragraphs, and a div 
+    - Change the text of a heading using textContent 
+    - Change the HTML inside a div using innerHTML 
+    - Compare innerHTML vs textContent with HTML tags in content 
+    - Create a function that updates multiple elements at once 
+    - Build a simple "quote of the day" that changes paragraph content -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Selection Practice</title>
+</head>
+<body>
+
+  <!-- Headings -->
+  <h1 id="main-heading">DOM Practice Page</h1>
+  <h2 class="sub-heading">Learning DOM</h2>
+
+  <!-- Paragraphs -->
+  <p class="text into">The Document Object Model (DOM) is a cross-platform 
+   and language-independent API that treats an HTML or XML document
+   as a tree structure wherein each node is an object representing a
+   part of the document.</p>
+
+  <p class="text defination"> The DOM represents a document with a logical
+   tree. Each branch of the tree ends in a node, and each node contains
+   objects. DOM methods allow programmatic access to the tree; with them 
+   one can change the structure, style or content of a document</p>
+
+  <!-- Divs -->
+  <div id="container">
+    <p class="text">Inside container</p>
+  </div>
+
+  <button onclick="updatePage()">Update Page</button>
+<script>
+
+
+/*
+
+//Change the text of a heading using textContent 
+const heading=document.getElementById("main-heading");
+console.log(heading.textContent="Practice"); 
+
+
+//Change the HTML inside a div using innerHTML 
+const changedDiv=document.getElementById("container");
+console.log(changedDiv.innerHTML="box");
+    
+
+//Compare innerHTML vs textContent with HTML tags in content 
+const aboutDOM=document.querySelector(".text");
+console.log(aboutDOM.innerText); //jo UI pe dikh rha hai whi show hoga bas
+console.log(aboutDOM.textContent);//jo actual humne likha hai 
+
+
+*/
+
+//Create a function that updates multiple elements at once
+function updatePage(){
+  const heading1=document.getElementById("main-heading");
+  heading1.textContent="Quote of the Day";
+
+  const heading2=document.querySelector(".sub-heading");
+  heading2.textContent="शुभ प्रभात";
+  
+  const paragraph=document.querySelectorAll(".text");
+  paragraph[1].textContent="Honesty is the best policy means living with integrity, truthfulness,and sincerity.";
+  paragraph[2].textContent="Have a wonderfull day!!";
+  paragraph[0].textContent="Honesty is the best policy";
+  
+}
+</script>
+
+
