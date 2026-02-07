@@ -1,0 +1,64 @@
+<!--    - Create a box div with some initial styles 
+        - Change background color using JavaScript 
+        - Change multiple styles (width, height, border, padding) 
+        - Toggle a CSS class on button click 
+         - Add and remove multiple classes 
+        - Create a theme switcher (light/dark mode) using classList.toggle()-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>task 3 of DOM</b></title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-color:beige;">
+        <h1 id="heading"> Style Manipulation</h1>
+        <p class="intro">this task is to practice Style manipulation in DOM</p>
+        <div id="box"
+             style="width:300px;height: 150px;background-color:steelblue; padding:20px ;margin:15px;font-size:50px;font-family:'Courier New';
+              "><b>GOOD MORNING!</b>
+         </div>
+         <button  class="button1" onclick="changebg()">change background color</button><br>
+         <button class="button2" onclick="changeMultiple()">change multiple styles</button><br>
+         <button class="button3" onclick="toggleCSSclass()">toggle</button><br>
+         <button class="button4" onclick="add()">add multiple</button><br>
+         <button class="button5" onclick="remove()">remove multiple styles</button><br>
+         <button class="button6" onclick="toggleTheme()">toggle theme</button><br>
+         
+
+
+
+        <script>
+
+            //Change background color using JavaScript 
+            const box=document.getElementById("box");
+            function changebg(){
+            box.style.backgroundColor="yellow";}
+
+
+            //Change multiple styles (width, height, border, padding) 
+            function changeMultiple(){
+                box.style.width="400px";
+                box.style.height="125px";
+                box.style.padding="25px";
+                box.style.fontFamily="verdana"
+                box.style.backgroundColor="red";
+            }
+
+
+            //Change multiple styles (width, height, border, padding) 
+            const  intro=document.getELementById("heading");
+            const btn=document.querySelector(".button3");
+            function toggleCSSclass(){
+                btn.addEventListener("click",()=>{
+                       intro.classList.toggle("red");
+                })
+            }
+
+            //Add and remove multiple classes
+            
+            
+
+        </script>
+    </body>
+</html>
