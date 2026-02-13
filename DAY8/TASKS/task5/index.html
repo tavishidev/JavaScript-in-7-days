@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>creating image dynamically</title> 
+    </head>
+    <body>
+        <h1 id="heading"><b>hello girlies!</b></h1>
+        <div id="box">
+            <h2 id="creativity">Believe in yourself !</h2>
+            
+        </div>
+        <button id="btn">click this for desciption</button>
+        <hr>
+        <h2>creating a table from an array of data</h2>
+        <table id="table" width="50%" padding="5px">
+            <tr >
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>HOBBY</th>
+            </tr>
+            
+        </table>
+    </body>
+    <script>
+        
+ //1--Create a new paragraph and add it to the page 
+        /*structure should be like this:-
+         ul
+         ├─ li → text
+         ├─ li → text
+         ├─ li → text*/
+    const paragraph=document.createElement("p");
+    const text=document.createTextNode("every failure makes us more wiser and stronger.")
+    paragraph.appendChild(text);
+    document.getElementById("box").appendChild(paragraph);
+
+//2-- Create a list with 5 items programmatically 
+    const list=document.createElement("ul");
+    const items=["consistency","focus","patience","determination","dicipline"];
+     items.forEach((element)=>{
+         const li=document.createElement("li");
+         li.textContent=element;
+         list.append(li);
+        });
+    document.getElementById("box").appendChild(list);
+    
+//3--Create a complete card component (div with image, title, description)
+const title=document.createElement("h1");
+const text2=document.createTextNode("TITLE:Card");
+title.appendChild(text2);
+document.getElementById("box").appendChild(title);
+
+const image=document.createElement("img");
+image.src="img.webp";
+image.alt="card";
+image.width= 300;
+document.getElementById("box").appendChild(image);
+
+const btn=document.getElementById("btn");
+btn.addEventListener("click",()=>{
+     const description=document.createElement("p");
+     const text3=document.createTextNode("believing yourself doesn't mean you will never fail it means even if you fail you will have courage to stand up again.");
+     description.appendChild(text3);
+     document.getElementById("box").appendChild(description);
+    })
+
+//5-Create a table from an array of data
+const array=[ ["saksham",18,"singing"], ["yug",19,"gaming"], ["atish",19,"dancing"]];
+array.forEach(item=>{
+    const Rows=document.createElement("tr");
+    item.forEach(data=>{
+        const content=document.createElement("td");
+        content.style.border = "1px solid black";
+        content.style.padding = "5px";
+        content.textContent=data;
+        Rows.appendChild(content);
+    })
+    document.getElementById("table").appendChild(Rows);
+})
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+   </script>
+</html>/
